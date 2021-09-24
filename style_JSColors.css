@@ -5,11 +5,24 @@
 }
 
 h1 {
+    position: relative;
     text-align: center;
     text-decoration: underline;
     font-family: 'Bonheur Royale', cursive;
     font-size: 5em;
     padding: 0 0 0.5em 0;
+    animation: appear 1.6s ease;
+}
+
+@keyframes appear {
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
 }
 
 #rectangle {
@@ -18,7 +31,7 @@ h1 {
     border: 3px solid black;
     border-radius: 2px;
     margin: 10px 0 0 65px;
-    cursor: crosshair;
+    cursor: crosshair;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .colored {
@@ -33,9 +46,9 @@ h1 {
     width: 100px;
     height: 100px;
     position: absolute;
-    left: 400px;
+    left: 420px;
     top: 250px;
-    border: 2px solid black;
+    border: 2px solid black;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #colorRender {
@@ -49,10 +62,12 @@ h1 {
 article {
     position: absolute;
     left: 780px;
-    top: 180px;
+    top: 150px;
     display: inline-block;
     overflow-y: scroll;
     max-height: 450px;
+    width: 350px;
+    min-width: 300px;
 }
 
 label {
@@ -70,4 +85,9 @@ label:hover {
     width: 30px;
     margin: 10px 15px;
     border: 1px solid black;
+}
+
+.fa-trash-alt:hover {
+    background-color: red;
+    transition: background-color 0.8s ease;
 }
